@@ -1,0 +1,407 @@
+[
+  {
+    "nome": "Arroz Branco",
+    "informacoes_nutricionais": {
+      "proteina": 2.7,
+      "carboidrato": 28.2,
+      "gordura_total": 0.3,
+      "calorias": 130
+    }
+  },
+  {
+    "nome": "Feijão",
+    "informacoes_nutricionais": {
+      "proteina": 8.7,
+      "carboidrato": 22.5,
+      "gordura_total": 0.8,
+      "calorias": 127
+    }
+  },
+  {
+    "nome": "Banana",
+    "informacoes_nutricionais": {
+      "proteina": 1.1,
+      "carboidrato": 22.8,
+      "gordura_total": 0.3,
+      "calorias": 89
+    }
+  },
+  {
+    "nome": "Maçã",
+    "informacoes_nutricionais": {
+      "proteina": 0.3,
+      "carboidrato": 14,
+      "gordura_total": 0.2,
+      "calorias": 52
+    }
+  },
+  {
+    "nome": "Pão Integral",
+    "informacoes_nutricionais": {
+      "proteina": 8,
+      "carboidrato": 41,
+      "gordura_total": 4,
+      "calorias": 247
+    }
+  },
+  {
+    "nome": "Leite Integral",
+    "informacoes_nutricionais": {
+      "proteina": 3.2,
+      "carboidrato": 4.8,
+      "gordura_total": 3.3,
+      "calorias": 61
+    }
+  },
+  {
+    "nome": "Queijo Minas",
+    "informacoes_nutricionais": {
+      "proteina": 22,
+      "carboidrato": 2,
+      "gordura_total": 26,
+      "calorias": 350
+    }
+  },
+  {
+    "nome": "Ovo",
+    "informacoes_nutricionais": {
+      "proteina": 13,
+      "carboidrato": 1.1,
+      "gordura_total": 11,
+      "calorias": 155
+    }
+  },
+  {
+    "nome": "Tomate",
+    "informacoes_nutricionais": {
+      "proteina": 0.9,
+      "carboidrato": 3.9,
+      "gordura_total": 0.2,
+      "calorias": 18
+    }
+  },
+  {
+    "nome": "Batata",
+    "informacoes_nutricionais": {
+      "proteina": 2,
+      "carboidrato": 17,
+      "gordura_total": 0.1,
+      "calorias": 77
+    }
+  },
+  {
+    "nome": "Cenoura",
+    "informacoes_nutricionais": {
+      "proteina": 0.9,
+      "carboidrato": 10,
+      "gordura_total": 0.2,
+      "calorias": 41
+    }
+  },
+  {
+    "nome": "Peito de Frango",
+    "informacoes_nutricionais": {
+      "proteina": 31,
+      "carboidrato": 0,
+      "gordura_total": 3.6,
+      "calorias": 165
+    }
+  },
+  {
+    "nome": "Salmão",
+    "informacoes_nutricionais": {
+      "proteina": 20,
+      "carboidrato": 0,
+      "gordura_total": 13,
+      "calorias": 208
+    }
+  },
+  {
+    "nome": "Alface",
+    "informacoes_nutricionais": {
+      "proteina": 1.4,
+      "carboidrato": 2.9,
+      "gordura_total": 0.2,
+      "calorias": 15
+    }
+  },
+  {
+    "nome": "Abacate",
+    "informacoes_nutricionais": {
+      "proteina": 2,
+      "carboidrato": 9,
+      "gordura_total": 15,
+      "calorias": 160
+    }
+  },
+  {
+    "nome": "Laranja",
+    "informacoes_nutricionais": {
+      "proteina": 0.9,
+      "carboidrato": 12,
+      "gordura_total": 0.1,
+      "calorias": 47
+    }
+  },
+  {
+    "nome": "Morango",
+    "informacoes_nutricionais": {
+      "proteina": 0.7,
+      "carboidrato": 7.7,
+      "gordura_total": 0.3,
+      "calorias": 32
+    }
+  },
+  {
+    "nome": "Iogurte Natural",
+    "informacoes_nutricionais": {
+      "proteina": 3.5,
+      "carboidrato": 4.7,
+      "gordura_total": 3.3,
+      "calorias": 61
+    }
+  },
+  {
+    "nome": "Chocolate Amargo",
+    "informacoes_nutricionais": {
+      "proteina": 7.8,
+      "carboidrato": 46,
+      "gordura_total": 43,
+      "calorias": 546
+    }
+  },
+  {
+    "nome": "Melancia",
+    "informacoes_nutricionais": {
+      "proteina": 0.6,
+      "carboidrato": 8,
+      "gordura_total": 0.2,
+      "calorias": 30
+    }
+  },
+  {
+    "nome": "Café",
+    "informacoes_nutricionais": {
+      "proteina": 0.1,
+      "carboidrato": 0,
+      "gordura_total": 0,
+      "calorias": 2
+    }
+  },
+  {
+    "nome": "Chá Verde",
+    "informacoes_nutricionais": {
+      "proteina": 0,
+      "carboidrato": 0,
+      "gordura_total": 0,
+      "calorias": 1
+    }
+  },
+  {
+    "nome": "Macarrão",
+    "informacoes_nutricionais": {
+      "proteina": 5,
+      "carboidrato": 25,
+      "gordura_total": 1.1,
+      "calorias": 131
+    }
+  },
+  {
+    "nome": "Cebola",
+    "informacoes_nutricionais": {
+      "proteina": 1.1,
+      "carboidrato": 9.3,
+      "gordura_total": 0.1,
+      "calorias": 40
+    }
+  },
+  {
+    "nome": "Pimentão",
+    "informacoes_nutricionais": {
+      "proteina": 1,
+      "carboidrato": 6,
+      "gordura_total": 0.3,
+      "calorias": 31
+    }
+  },
+  {
+    "nome": "Brócolis",
+    "informacoes_nutricionais": {
+      "proteina": 2.8,
+      "carboidrato": 7,
+      "gordura_total": 0.4,
+      "calorias": 34
+    }
+  },
+  {
+    "nome": "Espinafre",
+    "informacoes_nutricionais": {
+      "proteina": 2.9,
+      "carboidrato": 3.6,
+      "gordura_total": 0.4,
+      "calorias": 23
+    }
+  },
+  {
+    "nome": "Abobrinha",
+    "informacoes_nutricionais": {
+      "proteina": 1.2,
+      "carboidrato": 3.1,
+      "gordura_total": 0.3,
+      "calorias": 17
+    }
+  },
+  {
+    "nome": "Melão",
+    "informacoes_nutricionais": {
+      "proteina": 0.8,
+      "carboidrato": 8,
+      "gordura_total": 0.2,
+      "calorias": 34
+    }
+  },
+  {
+    "nome": "Peru",
+    "informacoes_nutricionais": {
+      "proteina": 29,
+      "carboidrato": 0,
+      "gordura_total": 1,
+      "calorias": 135
+    }
+  },
+  {
+    "nome": "Carne Bovina",
+    "informacoes_nutricionais": {
+      "proteina": 26,
+      "carboidrato": 0,
+      "gordura_total": 15,
+      "calorias": 250
+    }
+  },
+  {
+    "nome": "Lentilha",
+    "informacoes_nutricionais": {
+      "proteina": 9,
+      "carboidrato": 20,
+      "gordura_total": 0.4,
+      "calorias": 116
+    }
+  },
+  {
+    "nome": "Aveia",
+    "informacoes_nutricionais": {
+      "proteina": 13,
+      "carboidrato": 66,
+      "gordura_total": 7,
+      "calorias": 389
+    }
+  },
+  {
+    "nome": "Castanha de Caju",
+    "informacoes_nutricionais": {
+      "proteina": 18,
+      "carboidrato": 30,
+      "gordura_total": 43,
+      "calorias": 553
+    }
+  },
+  {
+    "nome": "Amêndoas",
+    "informacoes_nutricionais": {
+      "proteina": 21,
+      "carboidrato": 22,
+      "gordura_total": 49,
+      "calorias": 579
+    }
+  },
+  {
+    "nome": "Azeite de Oliva",
+    "informacoes_nutricionais": {
+      "proteina": 0,
+      "carboidrato": 0,
+      "gordura_total": 100,
+      "calorias": 884
+    }
+  },
+  {
+    "nome": "Coco",
+    "informacoes_nutricionais": {
+      "proteina": 3.3,
+      "carboidrato": 15,
+      "gordura_total": 33,
+      "calorias": 354
+    }
+  },
+  {
+    "nome": "Açúcar",
+    "informacoes_nutricionais": {
+      "proteina": 0,
+      "carboidrato": 100,
+      "gordura_total": 0,
+      "calorias": 387
+    }
+  },
+  {
+    "nome": "Mel",
+    "informacoes_nutricionais": {
+      "proteina": 0.3,
+      "carboidrato": 82,
+      "gordura_total": 0,
+      "calorias": 304
+    }
+  },
+  {
+    "nome": "Batata Doce",
+    "informacoes_nutricionais": {
+      "proteina": 1.6,
+      "carboidrato": 20,
+      "gordura_total": 0,
+      "calorias": 86
+    }
+  },
+  {
+    "nome": "Ervilha",
+    "informacoes_nutricionais": {
+      "proteina": 5,
+      "carboidrato": 14,
+      "gordura_total": 0.4,
+      "calorias": 81
+    }
+  },
+  {
+    "nome": "Chuchu",
+    "informacoes_nutricionais": {
+      "proteina": 0.6,
+      "carboidrato": 7,
+      "gordura_total": 0.1,
+      "calorias": 19
+    }
+  },
+  {
+    "nome": "Peixe Tilápia",
+    "informacoes_nutricionais": {
+      "proteina": 26,
+      "carboidrato": 0,
+      "gordura_total": 2.7,
+      "calorias": 128
+    }
+  },
+  {
+    "nome": "Isca de Peixe",
+    "informacoes_nutricionais": {
+      "proteina": 19,
+      "carboidrato": 10,
+      "gordura_total": 5,
+      "calorias": 160
+    }
+  },
+  {
+    "nome": "Suco de Laranja",
+    "informacoes_nutricionais": {
+      "proteina": 0.7,
+      "carboidrato": 10,
+      "gordura_total": 0.2,
+      "calorias": 45
+    }
+  }
+]
