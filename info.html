@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Nutricional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="./img/ChatGPT Image 17 de jun. de 2025, 00_27_35-Photoroom.png" alt="Logo do Site">
+    </a>
+    <nav class="links">
+      <a href="index.html">
+        <p class="links_topo">Home</p>
+      </a>
+      <a href="info.html">
+        <p class="links_topo">Informações Nutricionais</p>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <img class="banner" src="./img/image.jpg" alt="Essa é a Essência">
+
+    <div class="container">
+      <h1>Cálculo Nutricional de Alimentos</h1>
+
+      <div class="form">
+        <label for="Sexo">Sexo:</label>
+        <select id="Sexo" name="Sexo">
+          <option></option>
+          <option value="M">M</option>
+          <option value="F">F</option>
+        </select>
+
+        <label for="Peso">Peso (Kg):</label>
+        <input type="number" id="quantidade" placeholder="Digite o seu peso" />
+
+        <label for="Altura">Altura:</label>
+        <input type="text" id="Altura" placeholder="Digite a sua altura" />
+
+        <label for="Idade">Idade:</label>
+        <input type="number" id="Idade" placeholder="Digite a sua idade" />
+
+        <label for="Atividade:"> Nível de Atividade Física:</label>
+        <select id="Atividade" name="Atividade">
+          <option></option>
+          <option value="volvo">Sedentário (nenhum ou quase)</option>
+          <option value="saab">Leve (1-2x semana)</option>
+          <option value="fiat">Moderado (3-5x semana)</option>
+          <option value="audi">Alto (6-7x semana)</option>
+          <option value="audi">Muito Alto (duas vezes por dia, atleta)</option>
+        </select>
+
+        <label for="Objetivo">Objetivo:</label>
+        <select id="Objetivo" name="Objetivo">
+          <option></option>
+          <option value="volvo">Manutenção</option>
+          <option value="saab">Emagrecimento</option>
+          <option value="fiat">Hipertrofia</option>
+        </select>
+
+        <button onclick="calculoProteina()">Proteína</button>
+        <button onclick="calculoCarbo()">Carboidrato</button>
+        <button onclick="calculoCaloria()">Caloria</button>
+        <button onclick="limparCalculo()">Limpar</button>
+      </div>
+
+      <div id="resultado2" class="resultado2">
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

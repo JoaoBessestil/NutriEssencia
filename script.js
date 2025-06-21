@@ -1,7 +1,6 @@
 let alimentos = [];
 let alimentosSelecionados = [];
 
-// Carrega o JSON
 fetch('alimentos.json')
   .then(response => response.json())
   .then(data => {
@@ -12,18 +11,17 @@ fetch('alimentos.json')
     console.error('Erro ao carregar o JSON:', error);
   });
 
-// Consulta individual (não mexe na lista acumulada)
 function consultarInformacoes() {
-  const nomeAlimento = document.getElementById('nomeAlimento').value.toLowerCase().trim();
-  const quantidade = parseFloat(document.getElementById('quantidade').value);
-  const resultadoDiv = document.getElementById('resultado');
+  let nomeAlimento = document.getElementById('nomeAlimento').value.toLowerCase().trim();
+  let quantidade = parseFloat(document.getElementById('quantidade').value);
+  let resultadoDiv = document.getElementById('resultado');
 
   if (!nomeAlimento || isNaN(quantidade) || quantidade <= 0) {
     resultadoDiv.innerHTML = "Por favor, preencha ambos os campos corretamente.";
     return;
   }
 
-  const alimento = alimentos.find(a => a.nome.toLowerCase() === nomeAlimento);
+  let alimento = alimentos.find(a => a.nome.toLowerCase() === nomeAlimento);
 
   if (!alimento) {
     resultadoDiv.innerHTML = "Alimento não encontrado!";
@@ -40,11 +38,10 @@ function consultarInformacoes() {
   `;
 }
 
-// Adiciona alimento ao total acumulado
 function adicionarAlimento() {
-  const nomeAlimento = document.getElementById('nomeAlimento').value.toLowerCase().trim();
-  const quantidade = parseFloat(document.getElementById('quantidade').value);
-  const resultadoDiv = document.getElementById('resultado');
+  let nomeAlimento = document.getElementById('nomeAlimento').value.toLowerCase().trim();
+  let quantidade = parseFloat(document.getElementById('quantidade').value);
+  let resultadoDiv = document.getElementById('resultado');
 
   if (!nomeAlimento || isNaN(quantidade) || quantidade <= 0) {
     resultadoDiv.innerHTML = "Por favor, preencha ambos os campos corretamente.";
@@ -67,9 +64,8 @@ function adicionarAlimento() {
   resultadoDiv.innerHTML = `${alimento.nome} (${quantidade}g) adicionado ao total!`;
 }
 
-// Mostra o total acumulado
 function mostrarTotal() {
-  const resultadoDiv = document.getElementById('resultado');
+  let resultadoDiv = document.getElementById('resultado');
 
   if (alimentosSelecionados.length === 0) {
     resultadoDiv.innerHTML = "Nenhum alimento adicionado ainda.";
@@ -97,8 +93,103 @@ function mostrarTotal() {
   `;
 }
 
-// Limpa a lista acumulada
-function limparLista() {
-  alimentosSelecionados = [];
-  document.getElementById('resultado').innerHTML = "Lista de alimentos limpa.";
+function pegarValores() {
+  let sexo = document.getElementById('Sexo').value;
+  let peso = parseFloat(document.getElementById('quantidade').value);
+  let altura = parseFloat(document.getElementById('Altura').value) * 100; 
+  let idade = parseInt(document.getElementById('Idade').value);
+  let atividade = document.getElementById('Atividade').selectedIndex;
+  let objetivo = document.getElementById('Objetivo').selectedIndex;
+
+  return { sexo, peso, altura, idade, atividade, objetivo };
+}
+
+function calcularTMB(sexo, peso, altura, idade) {
+  if (sexo === 'M') {
+    return (10 * peso) + (6.25 * altura) - (5 * idade) + 5;
+  } else if (sexo === 'F') {
+    return (10 * peso) + (6.25 * altura) - (5 * idade) - 161;
+  } else {
+    return 0;
+  }
+}
+
+function fatorAtividade(indice) {
+  switch (indice) {
+    case 1: return 1.2;    // Sedentário
+    case 2: return 1.375;  // Leve
+    case 3: return 1.55;   // Moderado
+    case 4: return 1.725;  // Alto
+    case 5: return 1.9;    // Muito alto
+    default: return 1.2;
+  }
+}
+
+function ajusteObjetivo(calorias, indice) {
+  switch (indice) {
+    case 1: return calorias;              // Manutenção
+    case 2: return calorias - 500;        // Emagrecimento
+    case 3: return calorias + 300;        // Hipertrofia
+    default: return calorias;
+  }
+}
+
+function calculoCaloria() {
+  let { sexo, peso, altura, idade, atividade, objetivo } = pegarValores();
+
+  if (!sexo || !peso || !altura || !idade || atividade === 0 || objetivo === 0) {
+    document.getElementById('resultado2').innerHTML = 'Preencha todos os campos corretamente.';
+    return;
+  }
+
+  let tmb = calcularTMB(sexo, peso, altura, idade);
+  let fator = fatorAtividade(atividade);
+  let totalCalorias = tmb * fator;
+  totalCalorias = ajusteObjetivo(totalCalorias, objetivo);
+
+  document.getElementById('resultado2').innerHTML = `Sua meta calórica diária é: <strong>${totalCalorias.toFixed(0)} kcal</strong>`;
+}
+
+function calculoProteina() {
+  let { peso, objetivo } = pegarValores();
+
+  if (!peso || objetivo === 0) {
+    document.getElementById('resultado2').innerHTML = 'Preencha peso e objetivo.';
+    return;
+  }
+
+  let proteina = 0;
+
+  switch (objetivo) {
+    case 1: proteina = peso * 1.5; break; // Manutenção
+    case 2: proteina = peso * 2; break;   // Emagrecimento
+    case 3: proteina = peso * 2; break;   // Hipertrofia
+    default: proteina = peso * 1.5;
+  }
+
+  document.getElementById('resultado2').innerHTML = `Meta de proteína: <strong>${proteina.toFixed(1)}g por dia</strong>`;
+}
+
+function calculoCarbo() {
+  let { peso, objetivo } = pegarValores();
+
+  if (!peso || objetivo === 0) {
+    document.getElementById('resultado2').innerHTML = 'Preencha peso e objetivo.';
+    return;
+  }
+
+  let carbo = 0;
+
+  switch (objetivo) {
+    case 1: carbo = peso * 4; break; // Manutenção
+    case 2: carbo = peso * 2.5; break; // Emagrecimento
+    case 3: carbo = peso * 6; break; // Hipertrofia
+    default: carbo = peso * 4;
+  }
+
+  document.getElementById('resultado2').innerHTML = `Meta de carboidratos: <strong>${carbo.toFixed(1)}g por dia</strong>`;
+}
+
+function limparCalculo() {
+  document.getElementById('resultado2').innerHTML = '';
 }
