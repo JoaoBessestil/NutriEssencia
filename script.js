@@ -93,6 +93,11 @@ function mostrarTotal() {
   `;
 }
 
+function limparLista() {
+  alimentosSelecionados = []; 
+  document.getElementById('resultado').innerHTML = ''; 
+}
+
 function pegarValores() {
   let sexo = document.getElementById('Sexo').value;
   let peso = parseFloat(document.getElementById('quantidade').value);
